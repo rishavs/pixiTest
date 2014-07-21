@@ -1,0 +1,14 @@
+{
+	"name" : "TBS Game",
+	"grid": {
+		"mapStartX": 26,
+		"mapStartY": 30
+	},
+	"hex": {
+		"mapHexSize": 30,
+		"mapHexGap": 2
+	},
+	"misc": {
+		"moveDistance" : 3
+	}
+}
