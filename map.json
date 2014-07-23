@@ -1,40 +1,45 @@
 {
     "name" : "Pixi Dust Map",
     "hex" : {
-        "hexSize" : 40,
+        "hexSize" : 37,
         "hexScale": 0.5,
-        "hexGap" : 2,
-        "mapStartX": 36,
-        "mapStartY": 40
+        "hexGap" : 1,
+        "mapStartX": 60,
+        "mapStartY": 64,
+        "tileWidth": 64,
+        "tileHeight": 44,
+        "tileOffsetX": 0,
+        "tileOffsetY": 12
         },
-    "type" : {
-        "a" : "0x012345",
-        "b" : "0x123456",
-        "c" : "0x234567",
-        "d" : "0x345678",
-        "e" : "0x456789",
-        "f" : "0x56789a",
-        "g" : "0x6789a1",
-        "h" : "0x789a12",
-        "i" : "0x89a123",
-        "j" : "0x9a1234",
-        "k" : "0xab2345",
-        "l" : "0xabc345",
-        "m" : "0x1abcd5",
-        "n" : "0x12abcd",
-        "o" : "0x123abc",
-        "p" : "0x1a3abc",
-        "q" : "0xFb3ffc",
-        "r" : "0x1c3abc",
-        "s" : "0x1d3abc",
-        "t" : "0x1e3abc",
-        "u" : "0x12fabc",
-        "v" : "0x1bbbc",
-        "w" : "0x12fabc",
-        "x" : "0x12eabc",
-        "y" : "0x1237bc",
-        "z" : "0x12a7bc",
-        "@" : "0xeeeeee"
+    "tiles" : {
+        "a" : "tile_19",
+        "b" : "tile_16",
+        "c" : "tile_9",
+        "d" : "tile_3",
+        "e" : "tile_5",
+        "f" : "tile_4",
+        "g" : "tile_7",
+        "h" : "tile_8",
+        "i" : "tile_6",
+        "j" : "tile_10",
+        "k" : "tile_11",
+        "l" : "tile_12",
+        "m" : "tile_13",
+        "n" : "tile_14",
+        "o" : "tile_15",
+        "p" : "tile_2",
+        "q" : "tile_17",
+        "r" : "tile_18",
+        "s" : "tile_1",
+        "t" : "tile_20",
+        "u" : "tile_21",
+        "v" : "tile_22",
+        "w" : "tile_23",
+        "x" : "tile_24",
+        "y" : "tile_25",
+        "z" : "tile_26",
+        "@" : "tileCrys",
+        "$" : "tileAltar"
     },
     "grid" : [
         "-X-X-X-X-X-a-a-X-X-X-X-X-X-X-X-X-",
@@ -44,7 +49,7 @@
         "-X-l-l-k-k-c-@-c-g-g-p-p-X-X-X-X-",
         "l-@-l-i-i-c-c-g-@-g-q-q-X-X-X-X-X",
         "-X-l-l-i-@-i-d-d-g-g-q-@-q-X-X-X-",
-        "X-m-m-i-i-d-@-d-h-h-q-q-X-X-X-X-X",
+        "X-m-m-i-i-d-$-d-h-h-q-q-X-X-X-X-X",
         "-X-m-@-m-j-j-d-d-h-@-h-r-r-X-X-X-",
         "X-m-m-j-@-j-e-e-h-h-r-@-r-X-X-X-X",
         "-X-X-n-n-j-j-e-@-e-s-s-r-r-X-X-X-",
@@ -52,6 +57,60 @@
         "-X-X-n-n-o-@-o-f-f-s-s-X-X-X-X-X-",
         "X-X-X-X-o-o-f-@-f-X-X-X-X-X-X-X-X",
         "-X-X-X-X-X-X-X-f-f-X-X-X-X-X-X-X-"
-        ]
-    
+        ],
+    "objects" : {
+        "crystals" : {
+            "positions": [
+            
+            ],
+            "types" : {
+                "Life" : {
+                    "color" : "green",
+                    "sprite" : "xxx.png"
+                },
+                "War": {
+                    "color" : "red",
+                    "sprite" : "xxx.png"
+                },
+                "Insight": {
+                    "color" : "yellow",
+                    "sprite" : "xxx.png"
+                },
+                "Elemental": {
+                    "color" : "blue",
+                    "sprite" : "xxx.png"
+                },
+                "Holy": {
+                    "color" : "white",
+                    "sprite" : "xxx.png"
+                },
+                "Unholy": {
+                    "color" : "black",
+                    "sprite" : "xxx.png"
+                }
+            }
+        },
+        "pillar" : {
+        
+        }
+
+    },
+    "creatures" : {
+        "P1S" : { 
+            "type": "sage",
+            "position": "1x-15y14z",
+            "direction": "nn",
+            "sightRange": 5,
+            "sightCone" : 90,
+            "moveRange": 3
+        },
+        "P2S" : { 
+            "type": "sage",
+            "position": "5x-5y0z",
+            "direction": "ss",
+            "sightRange": 5,
+            "sightCone" : 90,
+            "moveRange": 3
+        }
+    }
 }

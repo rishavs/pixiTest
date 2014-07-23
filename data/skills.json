@@ -1,0 +1,98 @@
+{
+    "move" : {
+        "cost" : {
+            "unitAP" : 1,
+            "turnCost" : "APOver"
+        },
+        "target" : "self",
+        "range" : "invoke",
+        "effect" : {
+            "moveTo": "tile"
+        }
+        "tileRestriction" : "empty"
+    },
+    "attack" : {
+        "cost" : {
+            "unitAP" : 1,
+            "turnCost" : "TurnOver"
+        },
+        "target" : "self",
+        "range" : "na",
+        "effect" : {
+            "stateChange" : {
+                "armor" : {
+                    "operator": "plus",
+                    "value" : 1
+                },
+                "state" : {
+                    "name" : "fortified",
+                    "duration" : 1
+                }
+            }
+        }
+        "tileRestriction" : "na"
+    },
+    "shoot" : {
+        "cost" : {
+            "unitAP" : 1,
+            "turnCost" : "TurnOver"
+        },
+        "target" : "self",
+        "range" : "na",
+        "effect" : {
+            "stateChange" : {
+                "armor" : {
+                    "operator": "plus",
+                    "value" : 1
+                },
+                "state" : {
+                    "name" : "fortified",
+                    "duration" : 1
+                }
+            }
+        }
+        "tileRestriction" : "na"
+    },    
+    "steal" : {
+        "cost" : {
+            "unitAP" : 1,
+            "turnCost" : "TurnOver"
+        },
+        "target" : "self",
+        "range" : "na",
+        "effect" : {
+            "stateChange" : {
+                "armor" : {
+                    "operator": "plus",
+                    "value" : 1
+                },
+                "state" : {
+                    "name" : "fortified",
+                    "duration" : 1
+                }
+            }
+        }
+        "tileRestriction" : "na"
+    },    
+    "skulk" : {
+        "cost" : {
+            "unitAP" : 1,
+            "turnCost" : "TurnOver"
+        },
+        "target" : "self",
+        "range" : "na",
+        "effect" : {
+            "stateChange" : {
+                "armor" : {
+                    "operator": "plus",
+                    "value" : 1
+                },
+                "state" : {
+                    "name" : "fortified",
+                    "duration" : 1
+                }
+            }
+        }
+        "tileRestriction" : "na"
+    },
+}

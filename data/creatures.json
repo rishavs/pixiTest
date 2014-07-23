@@ -1,0 +1,297 @@
+{
+    "Warrior": {
+        "health": 1,
+        "armor" : 1,
+        "unitAP" : 2,
+        "sight" : {
+            "range" : 5
+            "cone" : 90,
+        },
+        "actions": {
+            "move" : {
+                "cost" : {
+                    "unitAP" : 1,
+                    "turnCost" : "APOver"
+                },
+                "target" : "tile",
+                "range" : 2,
+                "tileRestriction" : "empty"
+            "attack" : { 
+                "cost" : {
+                    "unitAP" : 1,
+                    "turnCost" : "TurnOver"
+                },
+                "target" : "enemy",
+                "range" : 1,
+                "tileRestriction" : "na"
+            },
+            "shield" : {
+                "cost" : {
+                    "unitAP" : 1,
+                    "turnCost" : "TurnOver"
+                },
+                "target" : "self",
+                "range" : "na",
+                "effect" : {
+                    "stateChange" : {
+                        "armor" : {
+                            "operator": "plus",
+                            "value" : 1
+                        },
+                        "state" : {
+                            "name" : "fortified",
+                            "duration" : 1
+                        }
+                    }
+                }
+                "tileRestriction" : "na"
+            }
+        },
+        "personalities" : {
+            "Sandra Tempest" : {
+                "nick": "the Mercenary Queen",
+                "gender" : "female",
+                "lore": "empty for now"          
+            },
+            "Simon" : {
+                "nick" : "of Pakrit",
+                "gender" : "male",
+                "lore": "empty for now"          
+            },
+            "Barrett" : {
+                "nick": "the Butcher",
+                "gender" : "male",
+                "lore": "empty for now"                
+            },
+            "Jonathan Poole" : {
+                "nick": "the Coward",
+                "gender" : "male",
+                "lore": "empty for now"                
+            },
+            "Oakey Tari" : {
+                "nick": "of Tayem",
+                "gender" : "male",
+                "lore": "empty for now"                
+            },
+            "Malena" : {
+                "nick": "of Rhellon",
+                "gender" : "female",
+                "lore": "empty for now"                
+            },
+            "Servitor" : {
+                "nick": "of Korrah",
+                "gender" : "male",
+                "lore": "empty for now"                
+            },
+            "Faceless" : {
+                "nick": "the Butcher",
+                "gender" : "male",
+                "lore": "empty for now"                
+            },
+            "Peter Liehssien" : {
+                "nick": "Fat",
+                "gender" : "male",
+                "lore": "empty for now"                
+            }
+        }
+    },
+    "Scout": {
+        "health": 1,
+        "armor": 0,
+        "actions": {
+            "first" :{
+                "move" : {
+                    "cost"
+                    "range" : 3,
+                    "restriction" : "APOver"}
+                "attack" : { 
+                    "target" : "enemy",
+                    "range" : "adjacent",
+                    "restriction" : "TurnOver"
+                }
+                "Special" : {
+                    "shield" : {
+                        "target" : "self",
+                        "effect" : {
+                            "armor" : "+1",
+                            "state" : "fortified"
+                        }
+                        "restriction" : "TurnOver"
+                    }
+                }
+            },
+            "second" : {
+                "move" : {
+                    "range" : 3,
+                    "restriction" : "APOver"}
+                "attack" : { 
+                    "target" : "enemy",
+                    "range" : "adjacent",
+                    "restriction" : "TurnOver"
+                }
+                "Special" : {
+                    "shield" : {
+                        "target" : "self",
+                        "effect" : {
+                            "armor" : "+1",
+                            "state" : "fortified"
+                        }
+                        "restriction" : "TurnOver"
+                    }
+                }
+            }
+        },
+        "personalities" : {
+            "Ann Travers" : {
+                "nick": "Dirty Paws",
+                "gender" : "female",
+                "lore": "empty for now"          
+            },
+            "Lady" : {
+                "nick" : " of Larcaster",
+                "gender" : "male",
+                "lore": "empty for now"          
+            },
+            "Princess Pook" : {
+                "nick": "the Butcher",
+                "gender" : "male",
+                "lore": "Cross dressing male"                
+            },
+            "Crockett" : {
+                "nick": "the three-fingered",
+                "gender" : "male",
+                "lore": "empty for now"                
+            },
+            "Macey" : {
+                "nick": "the Rat",
+                "gender" : "male",
+                "lore": "empty for now"                
+            },
+            "Rigon Phillips" : {
+                "nick": "of House Phillips",
+                "gender" : "female",
+                "lore": "empty for now"                
+            },
+            "Biscuit" : {
+                "nick": "The Fox",
+                "gender" : "male",
+                "lore": "a Thief and Con artist"                
+            },
+            "Gladiator Artixx" : {
+                "nick": "the Butcher",
+                "gender" : "male",
+                "lore": "empty for now"                
+            },
+            "Peter Liehssien" : {
+                "nick": "Fat",
+                "gender" : "male",
+                "lore": "empty for now"                
+            }
+        }
+    },
+    "Ranger": {
+        "personalities" : {
+            "Sandra Tempest" : {
+                "nick": "the Mercenary Queen",
+                "gender" : "female",
+                "lore": "empty for now"          
+            },
+            "Simon" : {
+                "nick" : "of Pakrit",
+                "gender" : "male",
+                "lore": "empty for now"          
+            },
+            "Barrett" : {
+                "nick": "the Butcher",
+                "gender" : "male",
+                "lore": "empty for now"                
+            },
+            "Jonathan Poole" : {
+                "nick": "the Coward",
+                "gender" : "male",
+                "lore": "empty for now"                
+            },
+            "Oakey Tari" : {
+                "nick": "of Tayem",
+                "gender" : "male",
+                "lore": "empty for now"                
+            },
+            "Malena" : {
+                "nick": "of Rhellon",
+                "gender" : "female",
+                "lore": "empty for now"                
+            },
+            "Servitor" : {
+                "nick": "of Korrah",
+                "gender" : "male",
+                "lore": "empty for now"                
+            },
+            "Faceless" : {
+                "nick": "the Butcher",
+                "gender" : "male",
+                "lore": "empty for now"                
+            },
+            "Lana Swift" : {
+                "nick": "Fat",
+                "gender" : "female",
+                "lore": "empty for now"                
+            }
+        }
+    },
+    "Magus": {
+        "personalities" : {
+            "Engineer Toyo" : {
+                "nick": "the Mercenary Queen",
+                "gender" : "female",
+                "lore": "empty for now"          
+            },
+            "Nar" : {
+                "nick" : "The Fallen",
+                "gender" : "male",
+                "lore": "empty for now"          
+            },
+            "Samwise" : {
+                "nick": "Son of Prakrit",
+                "gender" : "male",
+                "lore": "empty for now"                
+            },
+            "Sage Conrnicus" : {
+                "nick": "Coward",
+                "gender" : "male",
+                "lore": "empty for now"                
+            },
+            "Saint Elena" : {
+                "nick": "of Tayem",
+                "gender" : "female",
+                "lore": "empty for now"                
+            },
+            "Saint Victor II" : {
+                "nick": "of Rhellon",
+                "gender" : "female",
+                "lore": "empty for now"                
+            },
+            "Avatar" : {
+                "nick": "of Misery",
+                "gender" : "female",
+                "lore": "empty for now"                
+            },
+            "Shaman Upa'Oka" : {
+                "nick": "the Butcher",
+                "gender" : "male",
+                "lore": "empty for now"                
+            },
+            "Angela" : {
+                "nick": "the Witch Queen",
+                "gender" : "female",
+                "lore": "empty for now"                
+            }
+        }
+    },
+    "Ghoul": {
+        "health": 1,
+        "actions": {
+            "first" : ["move", "attack", "explode"],
+            "second" : "none"
+        },
+    }
+}

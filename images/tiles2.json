@@ -1,8 +1,168 @@
 {"frames": {
 
+"tile_1":
+{
+	"frame": {"x":1370,"y":2,"w":64,"h":44},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
+	"sourceSize": {"w":64,"h":44}
+},
+"tile_10":
+{
+	"frame": {"x":1305,"y":2,"w":64,"h":44},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
+	"sourceSize": {"w":64,"h":44}
+},
+"tile_11":
+{
+	"frame": {"x":1240,"y":2,"w":64,"h":44},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
+	"sourceSize": {"w":64,"h":44}
+},
+"tile_12":
+{
+	"frame": {"x":1175,"y":2,"w":64,"h":44},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
+	"sourceSize": {"w":64,"h":44}
+},
+"tile_13":
+{
+	"frame": {"x":1110,"y":2,"w":64,"h":44},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
+	"sourceSize": {"w":64,"h":44}
+},
+"tile_14":
+{
+	"frame": {"x":1045,"y":2,"w":64,"h":44},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
+	"sourceSize": {"w":64,"h":44}
+},
+"tile_15":
+{
+	"frame": {"x":980,"y":2,"w":64,"h":44},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
+	"sourceSize": {"w":64,"h":44}
+},
+"tile_16":
+{
+	"frame": {"x":915,"y":2,"w":64,"h":44},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
+	"sourceSize": {"w":64,"h":44}
+},
+"tile_17":
+{
+	"frame": {"x":134,"y":2,"w":65,"h":44},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":65,"h":44},
+	"sourceSize": {"w":65,"h":44}
+},
+"tile_18":
+{
+	"frame": {"x":68,"y":2,"w":65,"h":44},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":65,"h":44},
+	"sourceSize": {"w":65,"h":44}
+},
+"tile_19":
+{
+	"frame": {"x":850,"y":2,"w":64,"h":44},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
+	"sourceSize": {"w":64,"h":44}
+},
+"tile_2":
+{
+	"frame": {"x":785,"y":2,"w":64,"h":44},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
+	"sourceSize": {"w":64,"h":44}
+},
+"tile_20":
+{
+	"frame": {"x":720,"y":2,"w":64,"h":44},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
+	"sourceSize": {"w":64,"h":44}
+},
+"tile_3":
+{
+	"frame": {"x":655,"y":2,"w":64,"h":44},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
+	"sourceSize": {"w":64,"h":44}
+},
+"tile_4":
+{
+	"frame": {"x":590,"y":2,"w":64,"h":44},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
+	"sourceSize": {"w":64,"h":44}
+},
+"tile_5":
+{
+	"frame": {"x":525,"y":2,"w":64,"h":44},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
+	"sourceSize": {"w":64,"h":44}
+},
+"tile_6":
+{
+	"frame": {"x":2,"y":2,"w":65,"h":44},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":65,"h":44},
+	"sourceSize": {"w":65,"h":44}
+},
+"tile_7":
+{
+	"frame": {"x":460,"y":2,"w":64,"h":44},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
+	"sourceSize": {"w":64,"h":44}
+},
+"tile_8":
+{
+	"frame": {"x":395,"y":2,"w":64,"h":44},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
+	"sourceSize": {"w":64,"h":44}
+},
+"tile_9":
+{
+	"frame": {"x":330,"y":2,"w":64,"h":44},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
+	"sourceSize": {"w":64,"h":44}
+},
 "tileAltar":
 {
-	"frame": {"x":1431,"y":1,"w":64,"h":44},
+	"frame": {"x":265,"y":2,"w":64,"h":44},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
@@ -10,175 +170,7 @@
 },
 "tileCrys":
 {
-	"frame": {"x":1366,"y":1,"w":64,"h":44},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
-	"sourceSize": {"w":64,"h":44}
-},
-"tileDirt_1":
-{
-	"frame": {"x":1301,"y":1,"w":64,"h":44},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
-	"sourceSize": {"w":64,"h":44}
-},
-"tileDirt_10":
-{
-	"frame": {"x":1236,"y":1,"w":64,"h":44},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
-	"sourceSize": {"w":64,"h":44}
-},
-"tileDirt_11":
-{
-	"frame": {"x":1171,"y":1,"w":64,"h":44},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
-	"sourceSize": {"w":64,"h":44}
-},
-"tileDirt_12":
-{
-	"frame": {"x":1106,"y":1,"w":64,"h":44},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
-	"sourceSize": {"w":64,"h":44}
-},
-"tileDirt_13":
-{
-	"frame": {"x":1041,"y":1,"w":64,"h":44},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
-	"sourceSize": {"w":64,"h":44}
-},
-"tileDirt_14":
-{
-	"frame": {"x":976,"y":1,"w":64,"h":44},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
-	"sourceSize": {"w":64,"h":44}
-},
-"tileDirt_15":
-{
-	"frame": {"x":911,"y":1,"w":64,"h":44},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
-	"sourceSize": {"w":64,"h":44}
-},
-"tileDirt_16":
-{
-	"frame": {"x":846,"y":1,"w":64,"h":44},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
-	"sourceSize": {"w":64,"h":44}
-},
-"tileDirt_17":
-{
-	"frame": {"x":781,"y":1,"w":64,"h":44},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
-	"sourceSize": {"w":64,"h":44}
-},
-"tileDirt_18":
-{
-	"frame": {"x":716,"y":1,"w":64,"h":44},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
-	"sourceSize": {"w":64,"h":44}
-},
-"tileDirt_19":
-{
-	"frame": {"x":651,"y":1,"w":64,"h":44},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
-	"sourceSize": {"w":64,"h":44}
-},
-"tileDirt_2":
-{
-	"frame": {"x":586,"y":1,"w":64,"h":44},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
-	"sourceSize": {"w":64,"h":44}
-},
-"tileDirt_20":
-{
-	"frame": {"x":521,"y":1,"w":64,"h":44},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
-	"sourceSize": {"w":64,"h":44}
-},
-"tileDirt_3":
-{
-	"frame": {"x":456,"y":1,"w":64,"h":44},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
-	"sourceSize": {"w":64,"h":44}
-},
-"tileDirt_4":
-{
-	"frame": {"x":391,"y":1,"w":64,"h":44},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
-	"sourceSize": {"w":64,"h":44}
-},
-"tileDirt_5":
-{
-	"frame": {"x":326,"y":1,"w":64,"h":44},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
-	"sourceSize": {"w":64,"h":44}
-},
-"tileDirt_6":
-{
-	"frame": {"x":261,"y":1,"w":64,"h":44},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
-	"sourceSize": {"w":64,"h":44}
-},
-"tileDirt_7":
-{
-	"frame": {"x":196,"y":1,"w":64,"h":44},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
-	"sourceSize": {"w":64,"h":44}
-},
-"tileDirt_8":
-{
-	"frame": {"x":131,"y":1,"w":64,"h":44},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
-	"sourceSize": {"w":64,"h":44}
-},
-"tileDirt_9":
-{
-	"frame": {"x":66,"y":1,"w":64,"h":44},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
-	"sourceSize": {"w":64,"h":44}
-},
-"tileDirt":
-{
-	"frame": {"x":1,"y":1,"w":64,"h":44},
+	"frame": {"x":200,"y":2,"w":64,"h":44},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":44},
@@ -187,10 +179,10 @@
 "meta": {
 	"app": "http://www.codeandweb.com/texturepacker ",
 	"version": "1.0",
-	"image": "tiles.png",
+	"image": "tiles2.png",
 	"format": "RGBA8888",
-	"size": {"w":1496,"h":46},
+	"size": {"w":1436,"h":48},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:6e625d86e295c4b6fb6226b83717f8d2:01d4df32a96c375a6b9d33b9a4b6bc66:accbe1e7e294ded8391337fc1c446319$"
+	"smartupdate": "$TexturePacker:SmartUpdate:e30f1ced32e6466d058f72b3054b1ef1:b08ee8bda3705c670bb5cd9d34234892:a2ea7f1ef2bae323b6e6bbe3befb8be3$"
 }
 }

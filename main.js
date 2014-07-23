@@ -1,7 +1,14 @@
 var stage, renderer,
-    mapData,
-    gridLayer;
 
+    gridLayer, tileLayer,
+    
+    masterGameData = {"madpData" : {}}, // the object which contains things like definitions, mapdata, logic rules etc.
+    masterSceneData = {"tileProperties" : {}}, // the default sceneData that the serverSceneData is a copy of. it borrows a bit from masterGameData.
+    serverSceneData = {}, // the current scenData specific to a game instance
+    clientSceneData = {}, // the client side subset of the serverSceneData specific to a game instance and a client
+
+    textLog;
+    
 
 /*Game steps:
 1. define game logic & entities
@@ -13,7 +20,7 @@ var stage, renderer,
 
 function init() {
     // create an new instance of a pixi stage
-    stage = new PIXI.Stage(0xf0f0f0, true);
+    stage = new PIXI.Stage(0x101010);
 
     // create a renderer instance.
     renderer = new PIXI.autoDetectRenderer(1200, 600, null, false, true);
@@ -23,122 +30,156 @@ function init() {
     
     // creating the layers
     tileLayer = new PIXI.DisplayObjectContainer ();
-    tileLayer.interactive = true;
-    stage.addChild(gridLayer);    
+    stage.addChild(tileLayer);    
     
     gridLayer = new PIXI.DisplayObjectContainer ();
-    gridLayer.interactive = true;
     stage.addChild(gridLayer);
     
+    objLayer = new PIXI.DisplayObjectContainer ();
+    stage.addChild(objLayer);
+    
+    uiLayer = new PIXI.DisplayObjectContainer ();
+    stage.addChild(uiLayer);
+    
+    // Add text logger
+    textLog = new PIXI.Text("Showing log here", {font: "12px Snippet", fill: "yellow", align: "left"});
+    textLog.position.x = 10;
+    textLog.position.y = 10;
+    uiLayer.addChild(textLog);
+    
+    // load map data
     var loader = new PIXI.JsonLoader('/map.json');
     loader.load();
     loader.on( 'error', function( err ) {
         console.log( 'error', err );
     });
     loader.on('loaded', function(event) {
-        mapData = event.content.json;
-        
-        createHexGrid();
+        masterGameData.mapData = event.content.json;
+        textLog.setText('Map data uploaded');
     });
+    
+    // load other assets. may merge the jsonloader asset here
+    var assetsList = [
+        '/images/sprites.json',
+        '/images/tiles2.json'
+    ]
+    var assetLoader = new PIXI.AssetLoader (assetsList)
+    assetLoader.load();
+    assetLoader.on( 'error', function( err ) {
+        console.log( 'error', err );
+    });    
 
+    assetLoader.on('onComplete', function(event) {
+        textLog.setText('All Assets uploaded');
+        
+        populateHexGrid();
+        populateArtefacts();
+        populateCreatures();
+
+    });
+    
     requestAnimFrame( animate );
 };
 
+function populateArtefacts() {
+    textLog.setText('All Objects Populated');
+    console.log('All Objects Populated');
+}
+function createArtefact() {
+    textLog.setText('Artefact created');
+    console.log('Artefact created');
+}
 
+function populateCreatures() {
+    textLog.setText('All Creatures Populated');
+    console.log('All Creatures Populated');
+}
 
-function createHexGrid () {
+function createCreature() {
+    textLog.setText('Creature created');
+    console.log('Creature created');
+}
 
-	// calculate hex width and height. We will use these values to offset neighbouring hexes
-	var mapHexWidth = Math.sqrt(3)/2 * 2 * mapData.hex.hexSize;
-	var mapHexHeight = 3/4 * 2 * mapData.hex.hexSize;
-	
-	for (var i=0;i<mapData.grid.length;i++) {                      // iterate over total number of hex rows
-		// remove the "-" character representing the offset from the map data
-		mapData.grid[i] = mapData.grid[i].replace(/-/g,"");
-		
-		for (var j=0;j<mapData.grid[i].length;j++) {                 // iterate over each hex to be created in a single row.
-			var hexY = mapData.hex.mapStartY + i * mapHexHeight;
+function populateHexGrid () {
+    
+    var mapData = masterGameData.mapData;
+    
+    // local variables for the object values. this is because we dont want to read the object over and over again in the for loop
+    var tileWidth = mapData.hex.tileWidth;
+    var tileHeight = mapData.hex.tileHeight;
+    var tileOffsetX = mapData.hex.tileOffsetX;
+    var tileOffsetY = mapData.hex.tileOffsetY;
+    var mapStartX = mapData.hex.mapStartX;
+    var mapStartY = mapData.hex.mapStartY;
 
-			if (i%2 == 0) {
-				var hexX = mapData.hex.mapStartX + j * mapHexWidth;
-			}
-			else {
-				var hexX = mapData.hex.mapStartX + j * mapHexWidth + 1/2* mapHexWidth;
-			}
+    for (var i=0;i<mapData.grid.length;i++) {                      // iterate over total number of hex rows
+        // remove the "-" character representing the offset from the map data
+        mapData.grid[i] = mapData.grid[i].replace(/-/g,"");
+        
+        for (var j=0;j<mapData.grid[i].length;j++) {                 // iterate over each hex to be created in a single row.
+            var hexY = mapStartY + (i * (tileHeight-(tileOffsetY * 1.5)));
+
+            if (i%2 == 0) {
+                var hexX = mapStartX + j * tileWidth;
+            }
+            else {
+                var hexX = mapStartX + (j * tileWidth) + (1/2* tileWidth);
+            }
             // create the hexagon geom
             var hexType = mapData.grid[i][j]
             if ( hexType !="X") {
-                drawHexagon (hexX, hexY, mapData.hex.hexSize,mapData.hex.hexGap, mapData.hex.hexScale, mapData.type[hexType], i, j, hexType);
+                
+                // create the sprite based hex grid
+                createHexTile (hexX, hexY, i, j, mapData.tiles[hexType], hexType);
             }
-		}       
-	}
-
-}
-
-function drawHexagon(x,y, size, gap,scale, color, iterI, iterJ, type) {
-    var shape = new PIXI.Graphics();
-	// set a fill and line style
-	shape.beginFill(color);
-	shape.lineStyle(1, 0xa0a0a0, 1);
-    size = size-gap;
+        }
+    }
     
-    var vertices = [];
-    for (i = 0; i < 7; i++) {
-        angle = 2 * Math.PI / 6 * (i + 0.5);
-        var x_i = x + size * Math.cos(angle);
-        var y_i = scale * (y + size * Math.sin(angle));
-        vertices.push(new PIXI.Point(x_i, y_i));
-        
-        if (i === 0) { 
-            shape.moveTo(x_i, y_i) 
-            }
-        else {
-            shape.lineTo(x_i, y_i)
-            }
-    };
+    textLog.setText('Hexgrid Populated');
+    console.log('Hexgrid Populated');
 
-	shape.endFill();
+};
+
+
+function createHexTile(x,y, iterI, iterJ, name, type) {
+    
+    var sprite = new PIXI.Sprite.fromImage(name);
+    // size = size-gap;
+    
+    sprite.x = x;
+    sprite.y = y;
+    
+    // set registration point to centre of the sprite
+    sprite.anchor.x = 0.5;
+    sprite.anchor.y = 0.5;
     
     // calculate and save the axial coordinates
-	var cX = iterJ - (iterI - (iterI&1)) / 2;
+    var cX = iterJ - (iterI - (iterI&1)) / 2;
     var cZ = iterI;
     var cY = -1*(cX+cZ);
     
-	shape.hexId = cX + "x" + cY + "y" + cZ + "z";
-    shape.hexPosX = x;
-    shape.hexPosY = y;
+    sprite.hexId = cX + "x" + cY + "y" + cZ + "z";
+
+    sprite.interactive = true;
+    sprite.click = function(mouseData){
+        textLog.setText("MOUSE CLICK " + sprite.hexId);
+    } 
+
+    tileLayer.addChild(sprite);
     
-    shape.hitArea = new PIXI.Polygon(vertices);
-    shape.interactive = true;
+    // since we dont want to read through the stage or display container every time we need some info on a tile, we will save it in a new array for easier access
+    var tempObj = {};
+    tempObj.posX = x;
+    tempObj.posy = y;
 
-    shape.click = function(mouseData){
-       console.log("MOUSE CLICK " + shape.hexId);
-    }
-    shape.mouseover = function(mouseData){
-       console.log("MOUSE OVER " + shape.hexId);
-    }
-    shape.mousedown = function(mouseData) {
-        console.log("MOUSE DOWN " + shape.hexId);
-    }    
-    shape.mouseout = function(mouseData) {
-        console.log("MOUSE OUT " + shape.hexId);
-    }    
-    shape.mouseup = function(mouseData) {
-        console.log("MOUSE UP " + shape.hexId);
-    }    
-    shape.mouseupoutside = function(mouseData) {
-        console.log("MOUSE UP OUTSIDE " + shape.hexId);
-    }    
+    masterSceneData.tileProperties[sprite.hexId] = tempObj;
 
-    gridLayer.addChild(shape);
-}
+};
 
 function animate() {
     requestAnimFrame( animate );
 
 
-    
-    
     // render the stage   
     renderer.render(stage);
 };

@@ -1,0 +1,36 @@
+{
+    "Life" : {
+        "color" : "green",
+        "spells" : {
+            "Rebirth" : {
+                "affects": "unit",
+                "title" : "Gain extra Sage",
+                "description" : "An extra sage is spawned in a random empty hex on the Players Spawning Section",
+                "Lore" : "some lore goes here"
+            },
+            "Heal" : {
+                "affects": "unit",
+                "title" : "Gain extra Sage",
+                "description" : "All friendly knights are healed to full health",
+                "Lore" : "some lore goes here"
+            }
+        },
+        
+    },
+    "War": {
+        "color" : "red",
+    },
+    "Insight": {
+        "color" : "yellow",
+        next 2 turns see all hexes
+    },
+    "Elemental": {
+        "color" : "blue",
+    },
+    "Holy": {
+        "color" : "white",
+    },
+    "Unholy": {
+        "color" : "black",
+    },
+}
