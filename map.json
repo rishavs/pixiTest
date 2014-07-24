@@ -58,42 +58,35 @@
         "X-X-X-X-o-o-f-@-f-X-X-X-X-X-X-X-X",
         "-X-X-X-X-X-X-X-f-f-X-X-X-X-X-X-X-"
         ],
-    "objects" : {
+    "artefacts" : {
         "crystals" : {
             "positions": [
-            
+                "-1x-4y5z",
+                "2x-5y3z",
+                "-2x-6y8z",
+                "1x-7y6z",
+                "4x-8y4z",
+                "7x-9y2z",
+                "-3x-8y11z",
+                "0x-9y9z",
+                "6x-11y5z",
+                "9x-12y3z",
+                "-1x-11y12z",
+                "2x-12y10z",
+                "5x-13y8z",
+                "8x-14y6z",
+                "4x-15y11z",
+                "7x-16y9z" 
             ],
             "types" : {
-                "Life" : {
-                    "color" : "green",
-                    "sprite" : "xxx.png"
-                },
-                "War": {
-                    "color" : "red",
-                    "sprite" : "xxx.png"
-                },
-                "Insight": {
-                    "color" : "yellow",
-                    "sprite" : "xxx.png"
-                },
-                "Elemental": {
-                    "color" : "blue",
-                    "sprite" : "xxx.png"
-                },
-                "Holy": {
-                    "color" : "white",
-                    "sprite" : "xxx.png"
-                },
-                "Unholy": {
-                    "color" : "black",
-                    "sprite" : "xxx.png"
-                }
+                "Life" : "crysGreen",
+                "War": "crysRed",
+                "Insight": "crysYellow",
+                "Elemental": "crysBlue",
+                "Holy": "crysWhite",
+                "Unholy": "crysBlack"
             }
-        },
-        "pillar" : {
-        
         }
-
     },
     "creatures" : {
         "P1S" : { 
