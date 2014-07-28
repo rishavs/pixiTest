@@ -4,49 +4,11 @@
         "armor" : 1,
         "unitAP" : 2,
         "sight" : {
-            "range" : 5
-            "cone" : 90,
+            "range" : 5,
+            "cone" : 90
         },
-        "actions": {
-            "move" : {
-                "cost" : {
-                    "unitAP" : 1,
-                    "turnCost" : "APOver"
-                },
-                "target" : "tile",
-                "range" : 2,
-                "tileRestriction" : "empty"
-            "attack" : { 
-                "cost" : {
-                    "unitAP" : 1,
-                    "turnCost" : "TurnOver"
-                },
-                "target" : "enemy",
-                "range" : 1,
-                "tileRestriction" : "na"
-            },
-            "shield" : {
-                "cost" : {
-                    "unitAP" : 1,
-                    "turnCost" : "TurnOver"
-                },
-                "target" : "self",
-                "range" : "na",
-                "effect" : {
-                    "stateChange" : {
-                        "armor" : {
-                            "operator": "plus",
-                            "value" : 1
-                        },
-                        "state" : {
-                            "name" : "fortified",
-                            "duration" : 1
-                        }
-                    }
-                }
-                "tileRestriction" : "na"
-            }
-        },
+        "actions": ["move", "attack","bash"],
+        "passives":["shield"],
         "personalities" : {
             "Sandra Tempest" : {
                 "nick": "the Mercenary Queen",
@@ -97,50 +59,14 @@
     },
     "Scout": {
         "health": 1,
-        "armor": 0,
-        "actions": {
-            "first" :{
-                "move" : {
-                    "cost"
-                    "range" : 3,
-                    "restriction" : "APOver"}
-                "attack" : { 
-                    "target" : "enemy",
-                    "range" : "adjacent",
-                    "restriction" : "TurnOver"
-                }
-                "Special" : {
-                    "shield" : {
-                        "target" : "self",
-                        "effect" : {
-                            "armor" : "+1",
-                            "state" : "fortified"
-                        }
-                        "restriction" : "TurnOver"
-                    }
-                }
-            },
-            "second" : {
-                "move" : {
-                    "range" : 3,
-                    "restriction" : "APOver"}
-                "attack" : { 
-                    "target" : "enemy",
-                    "range" : "adjacent",
-                    "restriction" : "TurnOver"
-                }
-                "Special" : {
-                    "shield" : {
-                        "target" : "self",
-                        "effect" : {
-                            "armor" : "+1",
-                            "state" : "fortified"
-                        }
-                        "restriction" : "TurnOver"
-                    }
-                }
-            }
+        "armor" : 0,
+        "unitAP" : 2,
+        "sight" : {
+            "range" : 5,
+            "cone" : 90
         },
+        "actions": ["move", "attack", "steal"],
+        "passives":["skulk"],
         "personalities" : {
             "Ann Travers" : {
                 "nick": "Dirty Paws",
@@ -190,6 +116,15 @@
         }
     },
     "Ranger": {
+        "health": 1,
+        "armor" : 0,
+        "unitAP" : 1,
+        "sight" : {
+            "range" : 5,
+            "cone" : 90
+        },
+        "actions": ["move", "attack", "familiar"],
+        "passives":["reset"],
         "personalities" : {
             "Sandra Tempest" : {
                 "nick": "the Mercenary Queen",
@@ -239,6 +174,14 @@
         }
     },
     "Magus": {
+        "health": 2,
+        "armor" : 0,
+        "unitAP" : 2,
+        "sight" : {
+            "range" : 5,
+            "cone" : 90
+        },
+        "actions": ["move", "attack", "collect", "harvest", "cast", "awaken"],
         "personalities" : {
             "Engineer Toyo" : {
                 "nick": "the Mercenary Queen",
@@ -288,10 +231,14 @@
         }
     },
     "Ghoul": {
-        "health": 1,
-        "actions": {
-            "first" : ["move", "attack", "explode"],
-            "second" : "none"
+        "health": 2,
+        "armor" : 0,
+        "unitAP" : 2,
+        "sight" : {
+            "range" : 5,
+            "cone" : 90
         },
+        "actions": ["move", "attack", "explode"],
+        "passives": ["infect"]
     }
 }

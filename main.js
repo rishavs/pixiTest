@@ -46,19 +46,36 @@ function init() {
     textLog.position.x = 10;
     textLog.position.y = 10;
     uiLayer.addChild(textLog);
+
+
+    // import the game definitions
+    var manifest = [
+        {src:"/map.json", id:"mapJson"},
+        {src:"/data/crystals.json", id:"crystalsJson"},
+        {src:"/data/creatures.json", id:"creaturesJson"}
+    ];
     
-    // load map data
-    var loader = new PIXI.JsonLoader('/map.json');
-    loader.load();
-    loader.on( 'error', function( err ) {
+    fileLoadQueue = new createjs.LoadQueue();
+    fileLoadQueue.setMaxConnections(5);
+    fileLoadQueue.loadManifest(manifest);
+    
+    fileLoadQueue.on( 'error', function( err ) {
         console.log( 'error', err );
-    });
-    loader.on('loaded', function(event) {
-        masterGameData.mapData = event.content.json;
-        textLog.setText('Map data uploaded');
+        textLog.setText('error : ' + err);
     });
     
-    // load other assets. may merge the jsonloader asset here
+    fileLoadQueue.on("complete", function () {
+		masterGameData.mapData = fileLoadQueue.getResult("mapJson");
+		masterGameData.crystalsData = fileLoadQueue.getResult("crystalsJson");
+		masterGameData.creaturesData = fileLoadQueue.getResult("creaturesJson");
+		
+        console.log( "PreloadJS manifest uploaded" );
+        textLog.setText('PreloadJS manifest uploaded');
+		}
+	);
+    
+    
+    // load visual assets. may merge the jsonloader asset here
     var assetsList = [
         '/images/creatures.json',
         '/images/tiles.json',

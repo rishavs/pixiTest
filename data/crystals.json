@@ -1,36 +1,87 @@
 {
     "Life" : {
-        "color" : "green",
+        "img" : "crysGreen",
         "spells" : {
             "Rebirth" : {
-                "affects": "unit",
-                "title" : "Gain extra Sage",
-                "description" : "An extra sage is spawned in a random empty hex on the Players Spawning Section",
-                "Lore" : "some lore goes here"
+                "chance" : 40
             },
             "Heal" : {
-                "affects": "unit",
-                "title" : "Gain extra Sage",
-                "description" : "All friendly knights are healed to full health",
-                "Lore" : "some lore goes here"
+                "chance" : 40
+            },
+            "trapGreen" : {
+                "chance" : 20
             }
-        },
+        }
         
     },
     "War": {
-        "color" : "red",
+        "img" : "crysRed",
+        "spells" : {
+            "Wound" : {
+                "chance" : 40
+            },
+            "Frenzy" : {
+                "chance" : 40
+            },
+            "trapGreen" : {
+                "chance" : 20
+            }
+        }
     },
     "Insight": {
-        "color" : "yellow",
-        next 2 turns see all hexes
+        "img" : "crysYellow",
+        "spells" : {
+            "Omniscience" : {
+                "chance" : 40
+            },
+            "Teleport" : {
+                "chance" : 40
+            },
+            "trapGreen" : {
+                "chance" : 20
+            }
+        }
     },
     "Elemental": {
-        "color" : "blue",
+        "img" : "crysBlue",
+        "spells" : {
+            "Freeze" : {
+                "chance" : 40
+            },
+            "Wind" : {
+                "chance" : 40
+            },
+            "trapGreen" : {
+                "chance" : 20
+            }
+        }
     },
     "Holy": {
-        "color" : "white",
+        "img" : "crysWhite",
+        "spells" : {
+            "Genesis" : {
+                "chance" : 40
+            },
+            "Immortality" : {
+                "chance" : 40
+            },
+            "trapGreen" : {
+                "chance" : 20
+            }
+        }
     },
     "Unholy": {
-        "color" : "black",
-    },
+        "img" : "crysBlack",
+        "spells" : {
+            "Necromancy" : {
+                "chance" : 40
+            },
+            "Death" : {
+                "chance" : 40
+            },
+            "trapGreen" : {
+                "chance" : 20
+            }
+        }
+    }
 }
